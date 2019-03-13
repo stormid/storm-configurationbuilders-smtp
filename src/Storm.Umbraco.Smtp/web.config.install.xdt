@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <configSections xdt:Transform="InsertIfMissing">
+    <section name="configBuilders" type="System.Configuration.ConfigurationBuildersSection, System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" restartOnExternalChanges="false" requirePermission="false" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)"/>
+  </configSections>
+
+  <configBuilders xdt:Transform="InsertIfMissing">
+    <builders xdt:Transform="InsertIfMissing">
+      <add name="SmtpConfigBuilder" type="Storm.Umbraco.Smtp.configbuilders.SmtpConfigBuilder, Storm.Umbraco.Smtp" xdt:Transform="InsertIfMissing"/>
+    </builders>
+  </configBuilders>
+
+  <appSettings xdt:Transform="InsertIfMissing">
+    <!-- Mail Settings -->
+    <add key="Smtp:Host" value="localhost" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
+    <add key="Smtp:Port" value="25" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
+    <add key="Smtp:Username" value="" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
+    <add key="Smtp:Password" value="" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
+    <add key="Smtp:EnableSsl" value="true" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
+  </appSettings>
+
+  <system.net xdt:Transform="InsertIfMissing">
+    <mailSettings xdt:Transform="InsertIfMissing">
+      <smtp configBuilders="SmtpConfigBuilder" xdt:Transform="InsertIfMissing" xdt:Locator="Match(configBuilders)" />
+    </mailSettings>
+  </system.net>
+</configuration>
