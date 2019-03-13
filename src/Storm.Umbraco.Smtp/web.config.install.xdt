@@ -11,12 +11,11 @@
   </configBuilders>
 
   <appSettings xdt:Transform="InsertIfMissing">
-    <!-- Mail Settings -->
     <add key="Smtp:Host" value="localhost" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
     <add key="Smtp:Port" value="25" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
     <add key="Smtp:Username" value="" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
     <add key="Smtp:Password" value="" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
-    <add key="Smtp:EnableSsl" value="true" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
+    <add key="Smtp:EnableSsl" value="false" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
   </appSettings>
 
   <system.net xdt:Transform="InsertIfMissing">
