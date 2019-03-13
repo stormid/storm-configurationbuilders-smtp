@@ -1,5 +1,5 @@
 # Storm.Umbraco.Smtp
-Configuration package for Umbraco
+Configuration package for Umbraco - see full configuration package: https://github.com/stormid/Storm.Umbraco.Configuration
 
 Dynamically creates the SMTP section of the web.config using a [.Net 471 configuration builder.](https://docs.microsoft.com/en-us/aspnet/config-builder) 
 
