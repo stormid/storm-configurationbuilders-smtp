@@ -8,7 +8,7 @@ SMTP settings are then specified through appsettings, meaning they can be change
 ## What's in the box?
 - Adds configuration builder & settings classes
 - Adds the configuration builder to the web.config
-- Adds appsettings - by default set up to use localhost:25
+- Adds appsettings (by default set up to use localhost:25)
 ```
     <add key="Smtp:Host" value="localhost" />
     <add key="Smtp:Port" value="25" />
