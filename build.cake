@@ -9,9 +9,8 @@ Setup<Configuration>(Configuration.Create);
 // -- DotNetCore
 #load ".cake/Restore-DotNetCore.cake"
 #load ".cake/Build-DotNetCore.cake"
-#load ".cake/Publish-Zip-DotNetCore.cake"
+#load ".cake/Test-DotNetCore.cake"
 #load ".cake/Publish-Pack-DotNetCore.cake"
-#load ".cake/Artifacts-DotNetCore-Ef.cake"
 // -------------
 
 RunTarget(Argument("target", Argument("Target", "Default")));
