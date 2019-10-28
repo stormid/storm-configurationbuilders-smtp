@@ -8,9 +8,11 @@ Task("Publish:Pack:NuGet")
     var projectArtifactDirectory = config.Artifacts.GetRootFor(ArtifactTypeOption.NuGet);
 
     foreach(var nugetProject in config.Solution.NuGetProjects) {
+     var properties = new Dictionary<string,string>{ { "Configuration", "Release"} };   
      var nuGetPackSettings   = new NuGetPackSettings {
                                      Version                 = $"{config.Version.SemVersion}",
-                                     OutputDirectory         = $"{projectArtifactDirectory}/"
+                                     OutputDirectory         = $"{projectArtifactDirectory}/",
+                                     Properties              = properties
                                  };
 
         NuGetPack(nugetProject.ProjectFilePath.ToString(), nuGetPackSettings);

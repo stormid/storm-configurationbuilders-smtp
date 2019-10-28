@@ -6,6 +6,7 @@
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
     <Description>Uses configuration builders to generate an smtp section in the web config based on app settings.</Description>
     <Authors>Owen Roberts</Authors>
+    <IncludeSymbols>false</IncludeSymbols>
   </PropertyGroup>
 
   <ItemGroup>
