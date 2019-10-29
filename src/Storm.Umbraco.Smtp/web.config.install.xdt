@@ -19,8 +19,8 @@
   </appSettings>
 
   <system.net xdt:Transform="InsertIfMissing">
-    <mailSettings xdt:Transform="InsertIfMissing">
-      <smtp configBuilders="SmtpConfigBuilder" xdt:Transform="InsertIfMissing" xdt:Locator="Match(configBuilders)" />
+    <mailSettings xdt:Transform="Insert">
+      <smtp configBuilders="SmtpConfigBuilder" xdt:Transform="Insert" xdt:Locator="Match(configBuilders)" />
     </mailSettings>
   </system.net>
 </configuration>
